@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>     <html class="no-js lt-ie9" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<link href="/wp-content/uploads/2016/03/favicon.png" type="image/png" rel="icon">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://stormpath.com/xmlrpc.php">
+
+<title>Progressive Web Applications with Angular, Spring Boot, and Stormpath - Stormpath User Identity API</title>
+
+<link rel="canonical" href="https://stormpath.com/blog/progressive-web-applications-angular-spring-boot-stormpath" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Progressive Web Applications with Angular, Spring Boot, and Stormpath - Stormpath User Identity API" />
+<meta property="og:description" content="Heads up&#8230; this post is old! For an updated version of this post, see Build Your First Progressive Web Application with Angular and Spring Boot on the Okta developer blog. Progressive Web Applications are the new hotness in web development. If you search for information on Progressive Web Applications (PWAs), you’ll find that most of &hellip;" />
+<meta property="og:url" content="https://stormpath.com/blog/progressive-web-applications-angular-spring-boot-stormpath" />
+<meta property="og:site_name" content="Stormpath User Identity API" />
+<meta property="article:author" content="mraible" />
+<meta property="article:tag" content="Angular" />
+<meta property="article:tag" content="Spring Boot" />
+<meta property="article:tag" content="Stormpath" />
+<meta property="article:section" content="Javascript" />
+<meta property="article:published_time" content="2017-02-23T10:46:27-08:00" />
+<meta property="article:modified_time" content="2018-07-27T08:26:11-07:00" />
+<meta property="og:updated_time" content="2018-07-27T08:26:11-07:00" />
+<meta property="og:image" content="http://stormpath.com/wp-content/uploads/2016/06/2016-06-15-12.15.23-e1468863059937.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Heads up&#8230; this post is old! For an updated version of this post, see Build Your First Progressive Web Application with Angular and Spring Boot on the Okta developer blog. Progressive Web Applications are the new hotness in web development. If you search for information on Progressive Web Applications (PWAs), you’ll find that most of &hellip;" />
+<meta name="twitter:title" content="Progressive Web Applications with Angular, Spring Boot, and Stormpath - Stormpath User Identity API" />
+<meta name="twitter:image" content="http://stormpath.com/wp-content/uploads/2016/06/2016-06-15-12.15.23-e1468863059937.jpg" />
+<meta name="twitter:creator" content="@mraible" />
+<meta property="DC.date.issued" content="2017-02-23T10:46:27-08:00" />
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Stormpath User Identity API &raquo; Feed" href="https://stormpath.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="Stormpath User Identity API &raquo; Comments Feed" href="https://stormpath.com/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="Stormpath User Identity API &raquo; Progressive Web Applications with Angular, Spring Boot, and Stormpath Comments Feed" href="https://stormpath.com/blog/progressive-web-applications-angular-spring-boot-stormpath/feed" />
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/stormpath.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.9"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-theme-stormpath-css' href='https://stormpath.com/wp-content/uploads/crayon-syntax-highlighter/themes/stormpath/stormpath.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-monaco-css' href='https://stormpath.com/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://stormpath.com/wp-includes/css/dist/block-library/style.min.css?ver=5.4.9' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://stormpath.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='stormpath-style-css' href='https://stormpath.com/wp-content/themes/stormpath/style.css?ver=5.4.9' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css' href='https://stormpath.com/wp-content/plugins/jetpack/css/jetpack.css?ver=9.0.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://stormpath.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://stormpath.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/jetpack/_inc/build/related-posts/related-posts.min.js?ver=20191011'></script>
+<link rel='https://api.w.org/' href='https://stormpath.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://stormpath.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://stormpath.com/wp-includes/wlwmanifest.xml" />
+<link rel='shortlink' href='https://stormpath.com/?p=8132' />
+<link rel="alternate" type="application/json+oembed" href="https://stormpath.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fstormpath.com%2Fblog%2Fprogressive-web-applications-angular-spring-boot-stormpath" />
+<link rel="alternate" type="text/xml+oembed" href="https://stormpath.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fstormpath.com%2Fblog%2Fprogressive-web-applications-angular-spring-boot-stormpath&#038;format=xml" />
+
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '986262161469311');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=986262161469311&ev=PageView&noscript=1"
+/></noscript>
+
+<script src="https://cdn.optimizely.com/js/225847041.js"></script>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress." />
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://stormpath.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="https://stormpath.com/wp-content/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen"><![endif]--><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<body id="blog" class="post-template-default single single-post postid-8132 single-format-standard stretched wpb-js-composer js-comp-ver-4.11.2.1 vc_responsive">
+<!--[if lt IE 8]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please "browsehappy.com" upgrade your browser or "www.google.com/chromeframe/?redirect=true" activate Google Chrome Frame to improve your experience.</p>
+<![endif]-->
+<div id="wrapper" class="clearfix">
+<header class="main-navbar">
+<nav class="navbar navbar-default navbar-fixed-top" id="main-nav-menu">
+<div class="container main-navbar-container">
+<div class="navbar-header-container">
+<div class="navbar-header">
+<a href="https://stormpath.com" class="standard-logo main-nav-logo" data-dark-logo="http://stormpath.com/wp-content/uploads/2017/08/logos.png"><img src="https://stormpath.com/wp-content/uploads/2017/08/logos.png" alt="Stormpath Logo"></a>
+
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapsable" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+</div>
+<style>
+              .global-msg {
+                  color: #bbb;
+                  text-align: right;
+                  margin-top: 18px;
+                  padding: 0px;
+              }
+          </style>
+<div class="collapse navbar-collapse" id="main-navbar-collapsable">
+<ul id="menu-menu-1" class="nav navbar-nav main-navbar__links"><li id="menu-item-5143" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-5143"><a class="main-navbar__link" href="https://stormpath.com/blog">Blog</a></li>
+</ul> <div class="global-msg visible-lg-block"><p>The Stormpath API shut down on August 17, 2017. Thank you to all the developers who have used Stormpath.</p>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div id="content" class="site-content">
+<section id="content">
+<div class="content-wrap nopadding">
+<style type="text/css">
+
+                    .blog_header {
+                        position: relative;
+                        background-image: url(https://stormpath.com/wp-content/uploads/2016/11/speed-red.jpg);
+                        background-position: center center;
+                        background-size: cover;
+                    }
+
+                    .blog_header,
+                    .blog_header_rule {
+                        height: 250px;
+                        border: none;
+                        position: relative;
+                        z-index: 11;
+                    }
+
+                    #blog .blog_header h1 {
+                        color: #fff;
+                        height: 220px;
+                        display: table-cell;
+                        vertical-align: bottom;
+                        padding: 0;
+                        margin: 0 !important;
+                    }
+
+                    .blog_header_text_bg {
+                        display: block !important;
+                        height: 100%;
+                        width: 100%;
+                        background: rgba(0,0,0,.7);
+                        position: absolute;
+                        z-index: 10;
+                        top: 0;
+                        left: 0;
+                    }
+
+                </style>
+<div class="blog_header blog_header_image nopadding">
+<div class="container nopadding" style="z-index: 12;">
+<div class="col-md-8">
+<h1 class="entry-title">Progressive Web Applications with Angular, Spring Boot, and Stormpath</h1>
+</div>
+</div> 
+<div class="blog_header_text_bg"></div>
+</div> 
+<div class="container clearfix nopadding">
+<main id="blog-content" class="site-main" role="main">
+<div class="col-md-8 col-sm-12 col-xs-12 nobottommargin nopadding clearfix">
+<article id="post-8132" class="post-8132 post type-post status-publish format-standard has-post-thumbnail hentry category-javascript tag-angular tag-spring-boot tag-stormpath" role="article">
+<div class="post-meta">
+<div class="author_avatar">
+
+
+<img alt='' src='https://secure.gravatar.com/avatar/c0ad5317cdfc728b7310d552b827acff?s=96&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/c0ad5317cdfc728b7310d552b827acff?s=192&#038;d=mm&#038;r=g 2x' class='avatar avatar-96 photo' height='96' width='96' /> </div> 
+<p class="author-and-date"> by Matt Raible <span class="dividers">|</span>
+February 23, 2017 <span class="dividers">|</span>
+</p>
+<ul class="post-categories">
+<li><a href="https://stormpath.com/blog/category/javascript" rel="category tag">Javascript</a></li></ul> </div>
+<div class="entry-content">
+<div style="padding: 20px;
+    background-color: #ebfaf4;
+    color: #12c677;
+    border: 1px solid #12c677;
+    margin-bottom: 10px;
+    border-radius: 5px;"></p>
+<p style="font-size: 16pt;
+    font-weight: 700">Heads up&#8230; this post is old!</p>
+<p>For an updated version of this post, see <a href="https://developer.okta.com/blog/2017/05/09/progressive-web-applications-with-angular-and-spring-boot">Build Your First Progressive Web Application with Angular and Spring Boot</a> on the Okta developer blog.
+</div>
+<p>Progressive Web Applications are the new hotness in web development. If you search for information on Progressive Web Applications (PWAs), you’ll find that most of the information comes from Google and its employees. This isn’t surprising as Google is often promoting the latest and greatest web technologies. They also develop their own browser, Chrome, which makes it possible to use many of the new standards in HTML5, JavaScript and beyond.</p>
+<p>Progressive Web Applications are those that leverage <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">Transport Layer Security</a> (TLS), webapp manifests and service workers to make an application installable with offline capabilities. In other words, a PWA is like a native app on your phone, but it’s built with web technologies like HTML5, JavaScript, and CSS3. If built right, a PWA is indistinguishable from a native application.</p>
+<p>You might ask, why is this important? Alex Russell recently stated “we’ve failed on mobile&#8221; when talking about <a href="https://www.youtube.com/watch?v=K1SFnrf4jZo&amp;feature=youtu.be">Adapting to the Mobile Present</a>. In his talk, he mentions a DoubleClick report that found 53% of visits are abandoned if a mobile site takes more than 3 seconds to load. That same report said the average mobile sites load in 19 seconds. Russell says one of the biggest problems is developers use powerful laptops and desktops to develop their mobile applications, rather than using a $200 device on a 3G connection. Using this environment is “ground truth&#8221; the majority of web users in the world. It’s cool to develop native applications, but people with slow phones and internet don’t want to download a 60MB app, they just want to use the web. PWAs are one of the easiest ways to make web applications faster and easier to use, allowing developers to build a better internet for everyone.</p>
+<p>To fight back and build better mobile apps, Russell recommends five techniques:</p>
+<ol>
+<li>Implement the PRPL pattern</li>
+<li>Get a ~$150-200 unlocked Android (e.g. Moto G4)</li>
+<li>Use chrome://inspect &amp;&amp; chrome://inspect?tracing</li>
+<li>Install <a href="https://github.com/GoogleChrome/lighthouse">Lighthouse</a> and use it to analyze your applications</li>
+<li>Use Chrome DevTools Network and CPU Throttling</li>
+</ol>
+<p>Google engineer Addy Osmani describes <a href="https://developers.google.com/web/fundamentals/performance/prpl-pattern/">the PRPL pattern</a> in an article on Google’s Web Fundamentals site.</p>
+<blockquote><p>
+PRPL is a pattern for structuring and serving Progressive Web Apps (PWAs), with an emphasis on the performance of app delivery and launch. It stands for:</p>
+<ul>
+<li><strong>Push</strong> critical resources for the initial URL route.</li>
+<li><strong>Render</strong> initial route.</li>
+<li><strong>Pre-cache</strong> remaining routes.</li>
+<li><strong>Lazy-load</strong> and create remaining routes on demand.</li>
+</ul>
+</blockquote>
+<p>The <a href="https://developers.google.com/web/progressive-web-apps/checklist">Progressive Web App Checklist</a> lists all the things you’ll need to make a progressive webapp. However, I like the simple list that Alex Russell lists on <a href="https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/">What, Exactly, Makes Something A Progressive Web App?</a>.</p>
+<p><a href="https://stormpath.com/wp-content/uploads/2017/01/alex-russell-pwas.png"><img src="https://stormpath.com/wp-content/uploads/2017/01/alex-russell-pwas-1024x494.png" alt="Alex Russell&#039;s PWA Checklist" width="1024" height="494" class="aligncenter size-large wp-image-7866" /></a></p>
+<p>This article will show you how to build a PWA with a Spring Boot backend and an Angular frontend. It’ll use Stormpath to secure everything and I’ll show how to deploy it to the cloud.</p>
+<h2 id="run-a-spring-boot-api">Run a Spring Boot API<a href="#run-a-spring-boot-api" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h2>
+<p>In <a href="https://stormpath.com/blog/tutorial-get-started-angular-spring-boot-stormpath">part 1 of this series</a>, I showed you how to create an API with Spring Boot and lock it down with Stormpath. We’ll be using the same project in this tutorial, but adding offline capabilities by turning it into a PWA.</p>
+<p>To begin, clone the project from GitHub and checkout the <code>pwa-start</code> branch.</p>
+<p></p>
+<div id="crayon-621f23d3afcdd675921582" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+git clone https://github.com/stormpath/stormpath-spring-boot-angular-pwa-example.git
+git checkout pwa-start</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcdd675921582-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcdd675921582-2">2</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcdd675921582-1"><span class="crayon-e">git </span><span class="crayon-r">clone</span><span class="crayon-h"> </span><span class="crayon-i">https</span><span class="crayon-sy">:</span><span class="crayon-c">//github.com/stormpath/stormpath-spring-boot-angular-pwa-example.git</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcdd675921582-2"><span class="crayon-e">git </span><span class="crayon-e">checkout </span><span class="crayon-i">pwa</span>-<span class="crayon-i">start</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>If you don’t have a Stormpath account, you’ll need to create one.</p>
+<div style="padding: 10px 10px 5px 10px; background-color: #eee; border: 1px solid silver; margin: 10px 0; font-size: .9em">
+<strong>Stormpath Setup</strong></p>
+<p style="font-size: .9em">The <a href="https://docs.stormpath.com/java/spring-boot-web/quickstart.html">Stormpath Spring Boot Quickstart</a> shows how to create an API key; here’s the abridged version:</p>
+<p style="font-size: .9em">From the Home tab of the Admin Console select Manage API Keys under the Developer Tools heading. Click the <strong>Create API Key</strong> button to trigger a download of a apiKey-{API_KEY}.properties file. Move the file to <code>~/.stormpath/apiKey.properties</code>.</p>
+</div>
+<p>Open the “server&#8221; project in your favorite IDE and run <code>DemoApplication</code> or start it from the command line using <code>./mvnw spring-boot:run</code>.</p>
+<p>Re-build your application and navigate to <a href="http://localhost:8080/good-beers">http://localhost:8080/good-beers</a>. You should be prompted to login. After entering valid credentials, you should see the list of good beers in your browser.</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/02/good-beers-json.png" alt="Good Beers JSON" /></p>
+<p>You can also see the result in your terminal window by using basic authentication and HTTPie.</p>
+<p></p>
+<div id="crayon-621f23d3afce4688813862" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+http localhost:8080/good-beers --auth yourusername:yourpassword</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afce4688813862-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afce4688813862-1"><span class="crayon-e">http </span><span class="crayon-i">localhost</span><span class="crayon-sy">:</span><span class="crayon-cn">8080</span>/<span class="crayon-i">good</span>-<span class="crayon-i">beers</span><span class="crayon-h"> </span>--<span class="crayon-e">auth </span><span class="crayon-i">yourusername</span><span class="crayon-sy">:</span><span class="crayon-i">yourpassword</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<h2 id="progressive-web-apps-with-angular">Progressive Web Apps with Angular<a href="#progressive-web-apps-with-angular" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h2>
+<p>I started my PWAs learning journey while sitting in a conference session with <a href="https://twitter.com/jshcrowthe">Josh Crowther</a> at <a href="https://stormpath.com/blog/angular-and-microservices-rich-web-experience-2016">The Rich Web Experience</a>. His <a href="bit.ly/2haHF1y">Progressive Web Apps: The Future of the Web</a> presentation taught me everything I needed to know to get started. However, his examples used Polymer and I wanted to create a PWA with Angular.</p>
+<p>When I first started researching how to build PWAs with Angular, I found <a href="https://mobile.angular.io">mobile.angular.io</a>.</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/01/mobile.angular.io_.png" alt="Angular Mobile Toolkit" /></p>
+<p>This website seemed to be exactly what I needed and I was pumped to find a tutorial showing <a href="https://github.com/angular/mobile-toolkit/blob/master/guides/cli-setup.md">how to build a PWA with Angular CLI</a>. After installing Angular CLI, I tried the tutorial&#8217;s recommended first step:</p>
+<p></p>
+<div id="crayon-621f23d3afce6018962722" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+ng new hello-mobile --mobile</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afce6018962722-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afce6018962722-1"><span class="crayon-e">ng </span><span class="crayon-r">new</span><span class="crayon-h"> </span><span class="crayon-i">hello</span>-<span class="crayon-i">mobile</span><span class="crayon-h"> </span>--<span class="crayon-i">mobile</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>I was disappointed to find the latest version of Angular CLI (1.0.0-beta.24) does not support the mobile flag.</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/01/ng-new-mobile.png" alt="ng new with mobile flag" /></p>
+<p>After searching through the project’s GitHub issues, I <a href="https://github.com/angular/mobile-toolkit/issues/109">found a reference</a> to <a href="https://twitter.com/webmaxru">Maxim Salnikov</a>’s <a href="https://github.com/webmaxru/pwa-guide-ngpoland/tree/step-dashboard">PWA demo app</a>. Maxim created this repo as part of a half-day workshop at <a href="http://ng-poland.pl/">ngPoland</a> and the project’s <code>README</code> said to contact him for workshop instructions. I emailed Maxim and he politely shared his <a href="bit.ly/pwa-ngpoland">Angular 2 PWA Workshop instructions</a> and <a href="https://slides.com/webmax/pwa-ngpoland#/">slides</a>.</p>
+<h2 id="transform-your-angular-app-to-be-a-pwa">Transform your Angular App to be a PWA<a href="#transform-your-angular-app-to-be-a-pwa" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h2>
+<p>There are a number of steps you need to perform to make the Angular client work offline and be a PWA.</p>
+<ol>
+<li>Add Angular Material</li>
+<li>Create and register a Service Worker</li>
+<li>Create an App Shell</li>
+<li>Add a manifest to make it installable</li>
+</ol>
+<h3 id="add-angular-material">Add Angular Material<a href="#add-angular-material" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h3>
+<p>Installing <a href="https://material.angular.io/">Angular Material</a> is not a necessary step, but it will make the client look much nicer. Make sure you’re in the <code>client</code> directory, then install it using npm.</p>
+<p></p>
+<div id="crayon-621f23d3afce7331974142" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+npm install --save @angular/material</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afce7331974142-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afce7331974142-1"><span class="crayon-e">npm </span><span class="crayon-i">install</span><span class="crayon-h"> </span>--<span class="crayon-i">save</span><span class="crayon-h"> </span><span class="crayon-sy">@</span><span class="crayon-i">angular</span>/<span class="crayon-i">material</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>Add <code>MaterialModule</code> as an import in <code>app.module.ts</code>:</p>
+<p></p>
+<div id="crayon-621f23d3afce8086694625" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/app/app.module.ts</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+import { MaterialModule } from '@angular/material';
+
+@NgModule({
+  ...
+  imports: [
+    ...
+    MaterialModule
+  ]</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afce8086694625-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afce8086694625-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afce8086694625-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afce8086694625-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afce8086694625-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afce8086694625-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afce8086694625-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afce8086694625-8">8</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afce8086694625-1"><span class="crayon-e">import</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-i">MaterialModule</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-h"> </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-s">'@angular/material'</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afce8086694625-2">&nbsp;</div><div class="crayon-line" id="crayon-621f23d3afce8086694625-3"><span class="crayon-sy">@</span><span class="crayon-e">NgModule</span><span class="crayon-sy">(</span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afce8086694625-4"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-621f23d3afce8086694625-5"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">imports</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afce8086694625-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-621f23d3afce8086694625-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">MaterialModule</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afce8086694625-8"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">]</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>Add Material icons and a theme to <code>styles.css</code>:</p>
+<p></p>
+<div id="crayon-621f23d3afce9764149040" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/styles.css</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">CSS</span></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afce9764149040-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afce9764149040-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afce9764149040-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afce9764149040-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afce9764149040-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afce9764149040-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afce9764149040-7">7</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afce9764149040-1"><span class="crayon-n">@import '~https://fonts.googleapis.com/icon?family=Material+Icons';</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afce9764149040-2"><span class="crayon-n">@import '<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e799a7868980928b8695">[email&#160;protected]</a>/material/core/theming/prebuilt/deeppurple-amber.css';</span></div><div class="crayon-line" id="crayon-621f23d3afce9764149040-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afce9764149040-4"><span class="crayon-k ">body </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-621f23d3afce9764149040-5"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e ">margin</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">0</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afce9764149040-6"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e ">font-family</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i ">Roboto,</span><span class="crayon-h"> </span><span class="crayon-i ">sans-serif</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afce9764149040-7"><span class="crayon-sy">}</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>Change the HTML templates to use Material components. For <code>app.component.html</code>, you can change the <code>&lt;h1&gt;</code> to be an <code>&lt;md-toolbar&gt;</code> and restructure the welcome message so it displays on the right.</p>
+<p></p>
+<div id="crayon-621f23d3afcea044203651" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/app/app.component.html</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">XHTML</span></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+&lt;md-toolbar color="primary"&gt;
+  &lt;span&gt;{{title}}&lt;/span&gt;
+&lt;/md-toolbar&gt;
+
+&lt;sp-authport&gt;&lt;/sp-authport&gt;
+
+&lt;div *ngIf="(user$ | async)"&gt;
+  &lt;span class="pull-right"&gt;
+    Welcome, {{ ( user$ | async ).fullName }}&lt;br&gt;
+    &lt;a href="" (click)="logout(); false"&gt;Logout&lt;/a&gt;
+  &lt;/span&gt;
+  &lt;div&gt;
+    &lt;beer-list&gt;&lt;/beer-list&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcea044203651-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcea044203651-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afcea044203651-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcea044203651-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afcea044203651-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcea044203651-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afcea044203651-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcea044203651-8">8</div><div class="crayon-num" data-line="crayon-621f23d3afcea044203651-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcea044203651-10">10</div><div class="crayon-num" data-line="crayon-621f23d3afcea044203651-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcea044203651-12">12</div><div class="crayon-num" data-line="crayon-621f23d3afcea044203651-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcea044203651-14">14</div><div class="crayon-num" data-line="crayon-621f23d3afcea044203651-15">15</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcea044203651-1"><span class="crayon-r ">&lt;md-toolbar </span><span class="crayon-e ">color</span>=<span class="crayon-s ">"primary"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcea044203651-2"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;span&gt;</span><span class="crayon-i ">{{title}}</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcea044203651-3"><span class="crayon-r ">&lt;/md-toolbar&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcea044203651-4">&nbsp;</div><div class="crayon-line" id="crayon-621f23d3afcea044203651-5"><span class="crayon-r ">&lt;sp-authport&gt;</span><span class="crayon-r ">&lt;/sp-authport&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcea044203651-6">&nbsp;</div><div class="crayon-line" id="crayon-621f23d3afcea044203651-7"><span class="crayon-r ">&lt;div </span>*<span class="crayon-e ">ngIf</span>=<span class="crayon-s ">"(user$ | async)"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcea044203651-8"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span>=<span class="crayon-s ">"pull-right"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcea044203651-9"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;Welcome, {{ ( user$ | async ).fullName }}</span><span class="crayon-r ">&lt;br&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcea044203651-10"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span>=<span class="crayon-s ">""</span><span class="crayon-h"> </span><span class="crayon-sy">(</span>click<span class="crayon-sy">)</span>=<span class="crayon-s ">"logout(); false"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Logout</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcea044203651-11"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcea044203651-12"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcea044203651-13"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;beer-list&gt;</span><span class="crayon-r ">&lt;/beer-list&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcea044203651-14"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcea044203651-15"><span class="crayon-r ">&lt;/div&gt;</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>In <code>beer-list.component.html</code>, change it to use <code>&lt;md-list&gt;</code> and its related components.</p>
+<p></p>
+<div id="crayon-621f23d3afceb486056945" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/app/beer-list/beer-list.component.html</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">XHTML</span></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+&lt;h2&gt;Beer List&lt;/h2&gt;
+
+&lt;md-list&gt;
+  &lt;md-list-item *ngFor="let b of beers"&gt;
+    &lt;img md-list-avatar src="{{b.giphyUrl}}" alt="{{b.name}}"&gt;
+    &lt;h3 md-line&gt;
+      {{b.name}}
+    &lt;/h3&gt;
+  &lt;/md-list-item&gt;
+&lt;/md-list&gt;</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afceb486056945-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afceb486056945-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afceb486056945-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afceb486056945-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afceb486056945-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afceb486056945-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afceb486056945-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afceb486056945-8">8</div><div class="crayon-num" data-line="crayon-621f23d3afceb486056945-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afceb486056945-10">10</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afceb486056945-1"><span class="crayon-r ">&lt;h2&gt;</span><span class="crayon-i ">Beer List</span><span class="crayon-r ">&lt;/h2&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afceb486056945-2">&nbsp;</div><div class="crayon-line" id="crayon-621f23d3afceb486056945-3"><span class="crayon-r ">&lt;md-list&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afceb486056945-4"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;md-list-item </span>*<span class="crayon-e ">ngFor</span>=<span class="crayon-s ">"let b of beers"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afceb486056945-5"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;img </span>md-list-avatar<span class="crayon-h"> </span><span class="crayon-e ">src</span>=<span class="crayon-s ">"{{b.giphyUrl}}"</span><span class="crayon-h"> </span><span class="crayon-e ">alt</span>=<span class="crayon-s ">"{{b.name}}"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afceb486056945-6"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;h3 </span>md-line<span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afceb486056945-7"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{b.name}}</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afceb486056945-8"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/h3&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afceb486056945-9"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/md-list-item&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afceb486056945-10"><span class="crayon-r ">&lt;/md-list&gt;</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>After making these changes, the app should look a little better. Below is a screenshot using Chrome’s device toolbar.</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/01/angular-material.png" alt="Angular Material" /></p>
+<p>To prove that there’s still work to do, you’ll notice that if you toggle offline mode in the Network tab of Chrome’s developer tools, the app does not work.</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/01/offline-fails.png" alt="Offline fails" /></p>
+<h3 id="create-and-register-a-service-worker">Create and Register a Service Worker<a href="#create-and-register-a-service-worker" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h3>
+<p>To create a service worker, start by creating a <code>src/sw.js</code> file that logs when events have been triggered.</p>
+<p></p>
+<div id="crayon-621f23d3afcec519002572" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/sw.js</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+self.addEventListener('install', (e) =&gt; {
+  console.log('Service Worker: Installed');
+});
+
+self.addEventListener('activate', (e) =&gt; {
+  console.log('Service Worker: Active');
+});
+
+self.addEventListener('fetch', (e) =&gt; {
+  console.log('Service Worker: Fetch');
+});</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcec519002572-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcec519002572-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afcec519002572-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcec519002572-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afcec519002572-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcec519002572-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afcec519002572-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcec519002572-8">8</div><div class="crayon-num" data-line="crayon-621f23d3afcec519002572-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcec519002572-10">10</div><div class="crayon-num" data-line="crayon-621f23d3afcec519002572-11">11</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcec519002572-1"><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">addEventListener</span><span class="crayon-sy">(</span><span class="crayon-s">'install'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-i">e</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcec519002572-2"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Service Worker: Installed'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcec519002572-3"><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcec519002572-4">&nbsp;</div><div class="crayon-line" id="crayon-621f23d3afcec519002572-5"><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">addEventListener</span><span class="crayon-sy">(</span><span class="crayon-s">'activate'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-i">e</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcec519002572-6"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Service Worker: Active'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcec519002572-7"><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcec519002572-8">&nbsp;</div><div class="crayon-line" id="crayon-621f23d3afcec519002572-9"><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">addEventListener</span><span class="crayon-sy">(</span><span class="crayon-s">'fetch'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-i">e</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcec519002572-10"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Service Worker: Fetch'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcec519002572-11"><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>Register this service worker by adding the following to <code>index.html</code>.</p>
+<p></p>
+<div id="crayon-621f23d3afced668385670" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/index.html</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">XHTML</span></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+&lt;script defer&gt;
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/sw.js').then(() =&gt; {
+      console.log('Service worker installed')
+    }, err =&gt; {
+      console.error('Service worker error:', err);
+    });
+  }
+&lt;/script&gt;</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afced668385670-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afced668385670-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afced668385670-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afced668385670-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afced668385670-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afced668385670-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afced668385670-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afced668385670-8">8</div><div class="crayon-num" data-line="crayon-621f23d3afced668385670-9">9</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afced668385670-1"><span class="crayon-ta">&lt;script </span><span class="crayon-i">defer</span><span class="crayon-h">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afced668385670-2"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-i">navigator</span><span class="crayon-sy">.</span><span class="crayon-i">serviceWorker</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-621f23d3afced668385670-3"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">navigator</span><span class="crayon-sy">.</span><span class="crayon-i">serviceWorker</span><span class="crayon-sy">.</span><span class="crayon-e">register</span><span class="crayon-sy">(</span><span class="crayon-s">'/sw.js'</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-st">then</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afced668385670-4"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Service worker installed'</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-621f23d3afced668385670-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">err</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afced668385670-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">console</span><span class="crayon-sy">.</span><span class="crayon-e">error</span><span class="crayon-sy">(</span><span class="crayon-s">'Service worker error:'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">err</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afced668385670-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afced668385670-8"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-621f23d3afced668385670-9"><span class="crayon-ta">&lt;/script&gt;</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>After making these changes, you should see log messages in your console.</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/02/service-worker-logs.png" alt="Service Worker logs" /></p>
+<p>You can also go to DevTools > Application > Service Workers to see that it’s been registered.</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/02/application-service-workers.png" alt="Application Service Workers" /></p>
+<p><strong>TIP:</strong> To ensure the service worker gets updated with each page refresh, check the “Update on reload&#8221; checkbox.</p>
+<p>The goal of adding PWA features to a webapp is to make sure it starts fast. To make this possible, you want to make sure all the resources are cached by the service worker and they’re sent to the page without a network request. To make this work, replace the contents of <code>sw.js</code> with the following file that caches local resources and network requests.</p>
+<p></p>
+<div id="crayon-621f23d3afcee309190975" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/sw.js</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+let log = console.log.bind(console);
+let err = console.error.bind(console);
+
+let version = '1';
+let cacheName = 'pwa-client-v' + version;
+let dataCacheName = 'pwa-client-data-v' + version;
+let appShellFilesToCache = [
+  './',
+  './index.html',
+  './inline.bundle.js',
+  './styles.bundle.js',
+  './vendor.bundle.js',
+  './main.bundle.js'
+];
+
+self.addEventListener('install', (e) =&gt; {
+  e.waitUntil(self.skipWaiting());
+  log('Service Worker: Installed');
+
+  e.waitUntil(
+    caches.open(cacheName).then((cache) =&gt; {
+      log('Service Worker: Caching App Shell');
+      return cache.addAll(appShellFilesToCache);
+    })
+  );
+});
+
+self.addEventListener('activate', (e) =&gt; {
+  e.waitUntil(self.clients.claim());
+  log('Service Worker: Active');
+
+  e.waitUntil(
+    caches.keys().then((keyList) =&gt; {
+      return Promise.all(keyList.map((key) =&gt; {
+
+        if (key !== cacheName) {
+          log('Service Worker: Removing old cache', key);
+          return caches.delete(key);
+        }
+
+      }));
+    })
+  );
+});
+
+self.addEventListener('fetch', (e) =&gt; {
+  log('Service Worker: Fetch URL ', e.request.url);
+
+  // Match requests for data and handle them separately
+  e.respondWith(
+    caches.match(e.request.clone()).then((response) =&gt; {
+      return response || fetch(e.request.clone()).then((r2) =&gt; {
+          return caches.open(dataCacheName).then((cache) =&gt; {
+            console.log('Service Worker: Fetched &amp; Cached URL ', e.request.url);
+            cache.put(e.request.url, r2.clone());
+            return r2.clone();
+          });
+        });
+    })
+  );
+});</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-8">8</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-10">10</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-12">12</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-14">14</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-16">16</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-18">18</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-20">20</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-21">21</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-22">22</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-23">23</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-24">24</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-25">25</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-26">26</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-27">27</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-28">28</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-29">29</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-30">30</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-31">31</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-32">32</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-33">33</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-34">34</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-35">35</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-36">36</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-37">37</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-38">38</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-39">39</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-40">40</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-41">41</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-42">42</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-43">43</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-44">44</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-45">45</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-46">46</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-47">47</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-48">48</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-49">49</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-50">50</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-51">51</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-52">52</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-53">53</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-54">54</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-55">55</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-56">56</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-57">57</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-58">58</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-59">59</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcee309190975-60">60</div><div class="crayon-num" data-line="crayon-621f23d3afcee309190975-61">61</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcee309190975-1"><span class="crayon-e">let </span><span class="crayon-i">log</span><span class="crayon-h"> </span>=<span class="crayon-h"> </span><span class="crayon-i">console</span><span class="crayon-sy">.</span><span class="crayon-i">log</span><span class="crayon-sy">.</span><span class="crayon-e">bind</span><span class="crayon-sy">(</span><span class="crayon-i">console</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-2"><span class="crayon-e">let </span><span class="crayon-i">err</span><span class="crayon-h"> </span>=<span class="crayon-h"> </span><span class="crayon-i">console</span><span class="crayon-sy">.</span><span class="crayon-i">error</span><span class="crayon-sy">.</span><span class="crayon-e">bind</span><span class="crayon-sy">(</span><span class="crayon-i">console</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-4"><span class="crayon-e">let </span><span class="crayon-i">version</span><span class="crayon-h"> </span>=<span class="crayon-h"> </span><span class="crayon-s">'1'</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-5"><span class="crayon-e">let </span><span class="crayon-i">cacheName</span><span class="crayon-h"> </span>=<span class="crayon-h"> </span><span class="crayon-s">'pwa-client-v'</span><span class="crayon-h"> </span>+<span class="crayon-h"> </span><span class="crayon-i">version</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-6"><span class="crayon-e">let </span><span class="crayon-i">dataCacheName</span><span class="crayon-h"> </span>=<span class="crayon-h"> </span><span class="crayon-s">'pwa-client-data-v'</span><span class="crayon-h"> </span>+<span class="crayon-h"> </span><span class="crayon-i">version</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-7"><span class="crayon-e">let </span><span class="crayon-i">appShellFilesToCache</span><span class="crayon-h"> </span>=<span class="crayon-h"> </span><span class="crayon-sy">[</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-8"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">'./'</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-9"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">'./index.html'</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-10"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">'./inline.bundle.js'</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-11"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">'./styles.bundle.js'</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-12"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">'./vendor.bundle.js'</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-13"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">'./main.bundle.js'</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-14"><span class="crayon-sy">]</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-15">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-16"><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">addEventListener</span><span class="crayon-sy">(</span><span class="crayon-s">'install'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-i">e</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-17"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">e</span><span class="crayon-sy">.</span><span class="crayon-e">waitUntil</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">skipWaiting</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-18"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Service Worker: Installed'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-19">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-20"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">e</span><span class="crayon-sy">.</span><span class="crayon-e">waitUntil</span><span class="crayon-sy">(</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-21"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">caches</span><span class="crayon-sy">.</span><span class="crayon-e">open</span><span class="crayon-sy">(</span><span class="crayon-i">cacheName</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-st">then</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-i">cache</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-22"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Service Worker: Caching App Shell'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-23"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-i">cache</span><span class="crayon-sy">.</span><span class="crayon-e">addAll</span><span class="crayon-sy">(</span><span class="crayon-i">appShellFilesToCache</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-24"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-25"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-26"><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-27">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-28"><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">addEventListener</span><span class="crayon-sy">(</span><span class="crayon-s">'activate'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-i">e</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-29"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">e</span><span class="crayon-sy">.</span><span class="crayon-e">waitUntil</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-i">clients</span><span class="crayon-sy">.</span><span class="crayon-e">claim</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-30"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Service Worker: Active'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-31">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-32"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">e</span><span class="crayon-sy">.</span><span class="crayon-e">waitUntil</span><span class="crayon-sy">(</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-33"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">caches</span><span class="crayon-sy">.</span><span class="crayon-e">keys</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-st">then</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-i">keyList</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-34"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-i">Promise</span><span class="crayon-sy">.</span><span class="crayon-e">all</span><span class="crayon-sy">(</span><span class="crayon-i">keyList</span><span class="crayon-sy">.</span><span class="crayon-e">map</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-i">key</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-35">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-36"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-i">key</span><span class="crayon-h"> </span><span class="crayon-sy">!</span>==<span class="crayon-h"> </span><span class="crayon-i">cacheName</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-37"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Service Worker: Removing old cache'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">key</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-38"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-i">caches</span><span class="crayon-sy">.</span><span class="crayon-e">delete</span><span class="crayon-sy">(</span><span class="crayon-i">key</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-39"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-40">&nbsp;</div><div class="crayon-line" id="crayon-621f23d3afcee309190975-41"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-42"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-43"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-44"><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-45">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-46"><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">addEventListener</span><span class="crayon-sy">(</span><span class="crayon-s">'fetch'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-i">e</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-47"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Service Worker: Fetch URL '</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">e</span><span class="crayon-sy">.</span><span class="crayon-i">request</span><span class="crayon-sy">.</span><span class="crayon-i">url</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-48">&nbsp;</div><div class="crayon-line" id="crayon-621f23d3afcee309190975-49"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-c">// Match requests for data and handle them separately</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-50"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">e</span><span class="crayon-sy">.</span><span class="crayon-e">respondWith</span><span class="crayon-sy">(</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-51"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">caches</span><span class="crayon-sy">.</span><span class="crayon-e">match</span><span class="crayon-sy">(</span><span class="crayon-i">e</span><span class="crayon-sy">.</span><span class="crayon-i">request</span><span class="crayon-sy">.</span><span class="crayon-e">clone</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-st">then</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-i">response</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-52"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-i">response</span><span class="crayon-h"> </span><span class="crayon-sy">|</span><span class="crayon-sy">|</span><span class="crayon-h"> </span><span class="crayon-e">fetch</span><span class="crayon-sy">(</span><span class="crayon-i">e</span><span class="crayon-sy">.</span><span class="crayon-i">request</span><span class="crayon-sy">.</span><span class="crayon-e">clone</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-st">then</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-i">r2</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-53"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-i">caches</span><span class="crayon-sy">.</span><span class="crayon-e">open</span><span class="crayon-sy">(</span><span class="crayon-i">dataCacheName</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-st">then</span><span class="crayon-sy">(</span><span class="crayon-sy">(</span><span class="crayon-i">cache</span><span class="crayon-sy">)</span><span class="crayon-h"> </span>=<span class="crayon-h">&gt;</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-54"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">console</span><span class="crayon-sy">.</span><span class="crayon-e">log</span><span class="crayon-sy">(</span><span class="crayon-s">'Service Worker: Fetched &amp; Cached URL '</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">e</span><span class="crayon-sy">.</span><span class="crayon-i">request</span><span class="crayon-sy">.</span><span class="crayon-i">url</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-55"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">cache</span><span class="crayon-sy">.</span><span class="crayon-e">put</span><span class="crayon-sy">(</span><span class="crayon-i">e</span><span class="crayon-sy">.</span><span class="crayon-i">request</span><span class="crayon-sy">.</span><span class="crayon-i">url</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">r2</span><span class="crayon-sy">.</span><span class="crayon-e">clone</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-56"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-i">r2</span><span class="crayon-sy">.</span><span class="crayon-e">clone</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-57"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-58"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-59"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcee309190975-60"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcee309190975-61"><span class="crayon-sy">}</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>After making this change and refreshing, you’ll notice that caches are created for both local assets.</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/01/local-cache.png" alt="Local cache" /></p>
+<p>And for network requests.</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/01/network-cache.png" alt="Network cache" /></p>
+<h3 id="create-an-app-shell">Create an App Shell<a href="#create-an-app-shell" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h3>
+<p>Angular App Shell is a project that provides <code>shellRender</code> and <code>shellNoRender</code> directives. Using these directives, you can specify which parts of your app are included in an app shell. Start by installing <code>app-shell</code> into your project.</p>
+<p></p>
+<div id="crayon-621f23d3afcef667206439" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+npm install @angular/app-shell --save</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcef667206439-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcef667206439-1"><span class="crayon-e">npm </span><span class="crayon-i">install</span><span class="crayon-h"> </span><span class="crayon-sy">@</span><span class="crayon-i">angular</span>/<span class="crayon-i">app</span>-<span class="crayon-i">shell</span><span class="crayon-h"> </span>--<span class="crayon-i">save</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>Import the <code>AppShellModule</code> into <code>app.module.ts</code> and specify it as an import.</p>
+<p></p>
+<div id="crayon-621f23d3afcf0495403104" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/app/app.module.ts</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+import { AppShellModule } from '@angular/app-shell';
+
+@NgModule({
+  ...
+  imports: [
+    ...
+    AppShellModule.runtime()
+  ],
+...</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num crayon-marked-num crayon-top crayon-bottom" data-line="crayon-621f23d3afcf0495403104-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf0495403104-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afcf0495403104-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf0495403104-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afcf0495403104-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf0495403104-6">6</div><div class="crayon-num crayon-marked-num crayon-top crayon-bottom" data-line="crayon-621f23d3afcf0495403104-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf0495403104-8">8</div><div class="crayon-num" data-line="crayon-621f23d3afcf0495403104-9">9</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line crayon-marked-line crayon-top crayon-bottom" id="crayon-621f23d3afcf0495403104-1"><span class="crayon-e">import</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-i">AppShellModule</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-h"> </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-s">'@angular/app-shell'</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf0495403104-2">&nbsp;</div><div class="crayon-line" id="crayon-621f23d3afcf0495403104-3"><span class="crayon-sy">@</span><span class="crayon-e">NgModule</span><span class="crayon-sy">(</span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf0495403104-4"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-621f23d3afcf0495403104-5"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">imports</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf0495403104-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line crayon-marked-line crayon-top crayon-bottom" id="crayon-621f23d3afcf0495403104-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">AppShellModule</span><span class="crayon-sy">.</span><span class="crayon-e">runtime</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf0495403104-8"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">]</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-621f23d3afcf0495403104-9"><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>Modify <code>app.component.html</code> to use app-shell’s directives.</p>
+<p></p>
+<div id="crayon-621f23d3afcf1708366953" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/app/app.component.html</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">XHTML</span></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+&lt;md-toolbar color="primary"&gt;
+  &lt;span&gt;{{title}}&lt;/span&gt;
+&lt;/md-toolbar&gt;
+ 
+&lt;sp-authport&gt;&lt;/sp-authport&gt;
+ 
+&lt;div *ngIf="(user$ | async)"&gt;
+  &lt;span class="pull-right"&gt;
+    Welcome, {{ ( user$ | async ).fullName }}&lt;br&gt;
+    &lt;a href="" (click)="logout(); false"&gt;Logout&lt;/a&gt;
+  &lt;/span&gt;
+  &lt;md-progress-bar mode="indeterminate" *shellRender&gt;&lt;/md-progress-bar&gt;
+  &lt;div *shellNoRender&gt;
+    &lt;beer-list&gt;&lt;/beer-list&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcf1708366953-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf1708366953-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afcf1708366953-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf1708366953-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afcf1708366953-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf1708366953-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afcf1708366953-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf1708366953-8">8</div><div class="crayon-num" data-line="crayon-621f23d3afcf1708366953-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf1708366953-10">10</div><div class="crayon-num" data-line="crayon-621f23d3afcf1708366953-11">11</div><div class="crayon-num crayon-marked-num crayon-top crayon-striped-num" data-line="crayon-621f23d3afcf1708366953-12">12</div><div class="crayon-num crayon-marked-num crayon-bottom" data-line="crayon-621f23d3afcf1708366953-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf1708366953-14">14</div><div class="crayon-num" data-line="crayon-621f23d3afcf1708366953-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf1708366953-16">16</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcf1708366953-1"><span class="crayon-r ">&lt;md-toolbar </span><span class="crayon-e ">color</span>=<span class="crayon-s ">"primary"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf1708366953-2"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;span&gt;</span><span class="crayon-i ">{{title}}</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcf1708366953-3"><span class="crayon-r ">&lt;/md-toolbar&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf1708366953-4"><span class="crayon-i "> </span></div><div class="crayon-line" id="crayon-621f23d3afcf1708366953-5"><span class="crayon-r ">&lt;sp-authport&gt;</span><span class="crayon-r ">&lt;/sp-authport&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf1708366953-6"><span class="crayon-i "> </span></div><div class="crayon-line" id="crayon-621f23d3afcf1708366953-7"><span class="crayon-r ">&lt;div </span>*<span class="crayon-e ">ngIf</span>=<span class="crayon-s ">"(user$ | async)"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf1708366953-8"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;span </span><span class="crayon-e ">class</span>=<span class="crayon-s ">"pull-right"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcf1708366953-9"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;Welcome, {{ ( user$ | async ).fullName }}</span><span class="crayon-r ">&lt;br&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf1708366953-10"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;a </span><span class="crayon-e ">href</span>=<span class="crayon-s ">""</span><span class="crayon-h"> </span><span class="crayon-sy">(</span>click<span class="crayon-sy">)</span>=<span class="crayon-s ">"logout(); false"</span><span class="crayon-r ">&gt;</span><span class="crayon-i ">Logout</span><span class="crayon-r ">&lt;/a&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcf1708366953-11"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/span&gt;</span></div><div class="crayon-line crayon-marked-line crayon-top crayon-striped-line" id="crayon-621f23d3afcf1708366953-12"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;md-progress-bar </span><span class="crayon-e ">mode</span>=<span class="crayon-s ">"indeterminate"</span><span class="crayon-h"> </span>*shellRender<span class="crayon-r ">&gt;</span><span class="crayon-r ">&lt;/md-progress-bar&gt;</span></div><div class="crayon-line crayon-marked-line crayon-bottom" id="crayon-621f23d3afcf1708366953-13"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;div </span>*shellNoRender<span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf1708366953-14"><span class="crayon-i ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r ">&lt;beer-list&gt;</span><span class="crayon-r ">&lt;/beer-list&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcf1708366953-15"><span class="crayon-i ">&nbsp;&nbsp;</span><span class="crayon-r ">&lt;/div&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf1708366953-16"><span class="crayon-r ">&lt;/div&gt;</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<h3 id="add-a-manifest-to-make-it-installable">Add a manifest to make it installable<a href="#add-a-manifest-to-make-it-installable" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h3>
+<p>The final step to making your app a PWA is to add a manifest that describes the application. This also enables the ability for people to install your app in Chrome as well as on smart phones.</p>
+<p>You can use <a href="https://realfavicongenerator.net/">Favicon Generator</a> to generate graphic assets and a <code>manifest.json</code> file. For an app icons, I searched for “beer icons&#8221; and found <a href="http://www.flaticon.com/free-icon/beer_168557#term=beer&amp;page=1&amp;position=26">this one</a>, developed by <a href="http://www.flaticon.com/authors/freepik">Freepik</a>. I generated a favicon, changed the generator options to use <code>assets/favicons</code> for the path, and downloaded the favicon package.</p>
+<p>Copy the contents of <code>favicons.zip</code> to <code>src/assets/favicons</code> and add the following HTML to the <code>&lt;head&gt;</code> of index.html.</p>
+<p></p>
+<div id="crayon-621f23d3afcf2952155570" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/index.html</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">XHTML</span></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+&lt;link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png"&gt;
+&lt;link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32"&gt;
+&lt;link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16"&gt;
+&lt;link rel="manifest" href="assets/favicons/manifest.json"&gt;
+&lt;link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5"&gt;
+&lt;link rel="shortcut icon" href="assets/favicons/favicon.ico"&gt;
+&lt;meta name="msapplication-config" content="assets/favicons/browserconfig.xml"&gt;
+&lt;meta name="theme-color" content="#ffffff"&gt;</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcf2952155570-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf2952155570-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afcf2952155570-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf2952155570-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afcf2952155570-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf2952155570-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afcf2952155570-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf2952155570-8">8</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcf2952155570-1"><span class="crayon-r ">&lt;link </span><span class="crayon-e ">rel</span>=<span class="crayon-s ">"apple-touch-icon"</span><span class="crayon-h"> </span><span class="crayon-e ">sizes</span>=<span class="crayon-s ">"180x180"</span><span class="crayon-h"> </span><span class="crayon-e ">href</span>=<span class="crayon-s ">"assets/favicons/apple-touch-icon.png"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf2952155570-2"><span class="crayon-r ">&lt;link </span><span class="crayon-e ">rel</span>=<span class="crayon-s ">"icon"</span><span class="crayon-h"> </span><span class="crayon-e ">type</span>=<span class="crayon-s ">"image/png"</span><span class="crayon-h"> </span><span class="crayon-e ">href</span>=<span class="crayon-s ">"assets/favicons/favicon-32x32.png"</span><span class="crayon-h"> </span><span class="crayon-e ">sizes</span>=<span class="crayon-s ">"32x32"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcf2952155570-3"><span class="crayon-r ">&lt;link </span><span class="crayon-e ">rel</span>=<span class="crayon-s ">"icon"</span><span class="crayon-h"> </span><span class="crayon-e ">type</span>=<span class="crayon-s ">"image/png"</span><span class="crayon-h"> </span><span class="crayon-e ">href</span>=<span class="crayon-s ">"assets/favicons/favicon-16x16.png"</span><span class="crayon-h"> </span><span class="crayon-e ">sizes</span>=<span class="crayon-s ">"16x16"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf2952155570-4"><span class="crayon-r ">&lt;link </span><span class="crayon-e ">rel</span>=<span class="crayon-s ">"manifest"</span><span class="crayon-h"> </span><span class="crayon-e ">href</span>=<span class="crayon-s ">"assets/favicons/manifest.json"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcf2952155570-5"><span class="crayon-r ">&lt;link </span><span class="crayon-e ">rel</span>=<span class="crayon-s ">"mask-icon"</span><span class="crayon-h"> </span><span class="crayon-e ">href</span>=<span class="crayon-s ">"assets/favicons/safari-pinned-tab.svg"</span><span class="crayon-h"> </span><span class="crayon-e ">color</span>=<span class="crayon-s ">"#5bbad5"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf2952155570-6"><span class="crayon-r ">&lt;link </span><span class="crayon-e ">rel</span>=<span class="crayon-s ">"shortcut icon"</span><span class="crayon-h"> </span><span class="crayon-e ">href</span>=<span class="crayon-s ">"assets/favicons/favicon.ico"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcf2952155570-7"><span class="crayon-r ">&lt;meta </span><span class="crayon-e ">name</span>=<span class="crayon-s ">"msapplication-config"</span><span class="crayon-h"> </span><span class="crayon-e ">content</span>=<span class="crayon-s ">"assets/favicons/browserconfig.xml"</span><span class="crayon-r ">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf2952155570-8"><span class="crayon-r ">&lt;meta </span><span class="crayon-e ">name</span>=<span class="crayon-s ">"theme-color"</span><span class="crayon-h"> </span><span class="crayon-e ">content</span>=<span class="crayon-s ">"#ffffff"</span><span class="crayon-r ">&gt;</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>Create a <code>manifest.webmanifest</code> in the <code>src</code> directory and populate it with the contents of <code>assets/favicons/manifest.json</code>, plus three additional properties: <code>short_name</code>, <code>background_color</code>, and <code>start_url</code>.</p>
+<p></p>
+<div id="crayon-621f23d3afcf3443694245" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/manifest.webmanifest</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+{
+  "name": "Good Beers",
+  "short_name": "Beers",
+  "icons": [
+    {
+      "src": "\/assets\/favicons\/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image\/png"
+    },
+    {
+      "src": "\/assets\/favicons\/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image\/png"
+    }
+  ],
+  "background_color": "#CA3627",
+  "theme_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "index.html"
+}</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcf3443694245-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf3443694245-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afcf3443694245-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf3443694245-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afcf3443694245-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf3443694245-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afcf3443694245-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf3443694245-8">8</div><div class="crayon-num" data-line="crayon-621f23d3afcf3443694245-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf3443694245-10">10</div><div class="crayon-num" data-line="crayon-621f23d3afcf3443694245-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf3443694245-12">12</div><div class="crayon-num" data-line="crayon-621f23d3afcf3443694245-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf3443694245-14">14</div><div class="crayon-num" data-line="crayon-621f23d3afcf3443694245-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf3443694245-16">16</div><div class="crayon-num" data-line="crayon-621f23d3afcf3443694245-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf3443694245-18">18</div><div class="crayon-num" data-line="crayon-621f23d3afcf3443694245-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf3443694245-20">20</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcf3443694245-1"><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf3443694245-2"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"name"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"Good Beers"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-621f23d3afcf3443694245-3"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"short_name"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"Beers"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf3443694245-4"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"icons"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span></div><div class="crayon-line" id="crayon-621f23d3afcf3443694245-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf3443694245-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"src"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"\/assets\/favicons\/favicon-32x32.png"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-621f23d3afcf3443694245-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"sizes"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"32x32"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf3443694245-8"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"type"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"image\/png"</span></div><div class="crayon-line" id="crayon-621f23d3afcf3443694245-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf3443694245-10"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-621f23d3afcf3443694245-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"src"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"\/assets\/favicons\/android-chrome-192x192.png"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf3443694245-12"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"sizes"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"192x192"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-621f23d3afcf3443694245-13"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"type"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"image\/png"</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf3443694245-14"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-621f23d3afcf3443694245-15"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">]</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf3443694245-16"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"background_color"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"#CA3627"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-621f23d3afcf3443694245-17"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"theme_color"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"#ffffff"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf3443694245-18"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"display"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"standalone"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-621f23d3afcf3443694245-19"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"start_url"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"index.html"</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf3443694245-20"><span class="crayon-sy">}</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>You’ll need to add a reference to this file in <code>index.html</code>.</p>
+<p></p>
+<div id="crayon-621f23d3afcf4921621114" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/index.html</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">XHTML</span></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+&lt;link rel="manifest" href="manifest.webmanifest"&gt;</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcf4921621114-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcf4921621114-1"><span class="crayon-r ">&lt;link </span><span class="crayon-e ">rel</span>=<span class="crayon-s ">"manifest"</span><span class="crayon-h"> </span><span class="crayon-e ">href</span>=<span class="crayon-s ">"manifest.webmanifest"</span><span class="crayon-r ">&gt;</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>If you refresh your app and Chrome doesn’t prompt you to install the app, you probably need to turn on a couple of features. Copy and paste the following URLs into Chrome to enable each feature.</p>
+<ul>
+<li>chrome://flags/#bypass-app-banner-engagement-checks</li>
+<li>chrome://flags/#enable-add-to-shelf</li>
+</ul>
+<p>After making these changes, you should see a prompt at the top of the screen to install the app.</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/02/install-pwa-prompt-chrome.png" alt="Install PWA Prompt Chrome" /></p>
+<p>If you open Chrome developer tools > Network and enable offline, you’ll notice the app still loads when the user is offline. <em>Yippee!</em></p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/02/offline-works.png" alt="Offline works" /></p>
+<h3 id="test-with-lighthouse">Test with Lighthouse<a href="#test-with-lighthouse" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h3>
+<p>Install the <a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk">Lighthouse extension for Chrome</a> and click its icon to audit your app.</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/02/lighthouse-pwa-report.png" alt="Lighthouse PWA Report" /></p>
+<p>79 is a pretty good score, but you might notice that the app is not served over HTTPS. Deploying the app to a cloud provider can make this possible.</p>
+<h2 id="deploy-to-the-cloud">Deploy to the cloud!<a href="#deploy-to-the-cloud" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h2>
+<p>There are many cloud providers that support Spring Boot. For the Angular client, any web server will do since the app is full of static files after it&#8217;s been built. However, there are a couple things you’ll need to do to prepare the application for production.</p>
+<p>First, modify <code>.angular-cli.json</code> to include the service worker and manifest files.</p>
+<p></p>
+<div id="crayon-621f23d3afcf5224392824" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">client/.angular-cli.json</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+{
+  ...
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets"
+        "sw.js",
+        "manifest.webmanifest"
+      ],
+...</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcf5224392824-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf5224392824-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afcf5224392824-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf5224392824-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afcf5224392824-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf5224392824-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afcf5224392824-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf5224392824-8">8</div><div class="crayon-num crayon-marked-num crayon-top" data-line="crayon-621f23d3afcf5224392824-9">9</div><div class="crayon-num crayon-marked-num crayon-bottom crayon-striped-num" data-line="crayon-621f23d3afcf5224392824-10">10</div><div class="crayon-num" data-line="crayon-621f23d3afcf5224392824-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf5224392824-12">12</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcf5224392824-1"><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf5224392824-2"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-621f23d3afcf5224392824-3"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"apps"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf5224392824-4"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-621f23d3afcf5224392824-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"root"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"src"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf5224392824-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"outDir"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-s">"dist"</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-621f23d3afcf5224392824-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"assets"</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-sy">[</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf5224392824-8"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"assets"</span></div><div class="crayon-line crayon-marked-line crayon-top" id="crayon-621f23d3afcf5224392824-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"sw.js"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-marked-line crayon-bottom crayon-striped-line" id="crayon-621f23d3afcf5224392824-10"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">"manifest.webmanifest"</span></div><div class="crayon-line" id="crayon-621f23d3afcf5224392824-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">]</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf5224392824-12"><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>In the <code>client</code> directory, run the following command to build and optimize for production.</p>
+<p></p>
+<div id="crayon-621f23d3afcf6980114868" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+ng build --prod --aot</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcf6980114868-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcf6980114868-1"><span class="crayon-e">ng </span><span class="crayon-i">build</span><span class="crayon-h"> </span>--<span class="crayon-i">prod</span><span class="crayon-h"> </span>--<span class="crayon-i">aot</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>Since you hard-coded the paths to local files in <code>sw.js</code>, you’ll need to update the paths to match the generated file names. Open <code>dist/sw.js</code> and change the <code>*.bundle.js</code> references in the <code>appShellFilesToCache</code> array to match the file names in the <code>dist</code> directory. Note that <code>styles.bundle.js</code> file reference should be changed to <code>style.*.bundle.css</code>. Later, I’ll show you how to automate this with a script.</p>
+<p>You’ll also need to modify the Stormpath configuration to use a different <code>endpointPrefix</code> for production.</p>
+<p></p>
+<div id="crayon-621f23d3afcf7354298820" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title">src/app/app.module.ts</span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+export function stormpathConfig(): StormpathConfiguration {
+  let spConfig: StormpathConfiguration = new StormpathConfiguration();
+  if (environment.production) {
+    spConfig.endpointPrefix = 'https://pwa-server.cfapps.io';
+  } else {
+    spConfig.endpointPrefix = 'http://localhost:8080';
+  }
+  return spConfig;
+}</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcf7354298820-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf7354298820-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afcf7354298820-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf7354298820-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afcf7354298820-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf7354298820-6">6</div><div class="crayon-num" data-line="crayon-621f23d3afcf7354298820-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf7354298820-8">8</div><div class="crayon-num" data-line="crayon-621f23d3afcf7354298820-9">9</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcf7354298820-1"><span class="crayon-e">export </span><span class="crayon-t">function</span><span class="crayon-h"> </span><span class="crayon-e">stormpathConfig</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-e">StormpathConfiguration</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf7354298820-2"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-e">let </span><span class="crayon-i">spConfig</span><span class="crayon-sy">:</span><span class="crayon-h"> </span><span class="crayon-i">StormpathConfiguration</span><span class="crayon-h"> </span>=<span class="crayon-h"> </span><span class="crayon-r">new</span><span class="crayon-h"> </span><span class="crayon-e">StormpathConfiguration</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcf7354298820-3"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-i">environment</span><span class="crayon-sy">.</span><span class="crayon-i">production</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf7354298820-4"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">spConfig</span><span class="crayon-sy">.</span><span class="crayon-i">endpointPrefix</span><span class="crayon-h"> </span>=<span class="crayon-h"> </span><span class="crayon-s">'https://pwa-server.cfapps.io'</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcf7354298820-5"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-h"> </span><span class="crayon-st">else</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf7354298820-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">spConfig</span><span class="crayon-sy">.</span><span class="crayon-i">endpointPrefix</span><span class="crayon-h"> </span>=<span class="crayon-h"> </span><span class="crayon-s">'http://localhost:8080'</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcf7354298820-7"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf7354298820-8"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-i">spConfig</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-621f23d3afcf7354298820-9"><span class="crayon-sy">}</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<h3 id="cloud-foundry">Cloud Foundry<a href="#cloud-foundry" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h3>
+<p>Now, let’s look at how to deploy it on Cloud Foundry with <a href="https://run.pivotal.io/">Pivotal Web Services</a>. The instructions below assume you have an account and have logged in (using <code>cf login</code>).</p>
+<p><strong>Deploy the client</strong></p>
+<p>To deploy a static application to Cloud Foundry is very easy. In the <code>dist</code> directory, create an empty <code>Staticfile</code>.</p>
+<p></p>
+<div id="crayon-621f23d3afcf8078303093" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+touch Staticfile</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcf8078303093-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcf8078303093-1"><span class="crayon-e">touch </span><span class="crayon-i">Staticfile</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>Run the following commands to push the client, set it to force HTTPs, then start it.</p>
+<p><strong>NOTE:</strong> You may have to change the name from “pwa-client&#8221; to a unique name that’s not being used.</p>
+<p></p>
+<div id="crayon-621f23d3afcf9663734415" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+cf push pwa-client --no-start
+cf set-env pwa-client FORCE_HTTPS true
+cf start pwa-client</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcf9663734415-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcf9663734415-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afcf9663734415-3">3</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcf9663734415-1"><span class="crayon-e">cf </span><span class="crayon-e">push </span><span class="crayon-i">pwa</span>-<span class="crayon-i">client</span><span class="crayon-h"> </span>--<span class="crayon-i">no</span>-<span class="crayon-e">start</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcf9663734415-2"><span class="crayon-e">cf </span><span class="crayon-i">set</span>-<span class="crayon-r">env</span><span class="crayon-h"> </span><span class="crayon-i">pwa</span>-<span class="crayon-e">client </span><span class="crayon-e">FORCE_HTTPS </span><span class="crayon-t">true</span></div><div class="crayon-line" id="crayon-621f23d3afcf9663734415-3"><span class="crayon-e">cf </span><span class="crayon-e">start </span><span class="crayon-i">pwa</span>-<span class="crayon-i">client</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>Navigate to the deployed application in your browser (e.g. https://pwa-client.cfapps.io) and ensure it loads. If it does, you’ll likely have a 404 in its console for when it tries to access the server.</p>
+<p><strong>Deploy the server</strong></p>
+<p>To deploy the Spring Boot backend, you first need to add CORS configuration for the new client. In <code>application.properties</code>, add the location of the deployed client.</p>
+<p></p>
+<div id="crayon-621f23d3afcfa130194763" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+stormpath.web.cors.allowed.originUris = http://localhost:4200,https://pwa-client.cfapps.io</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcfa130194763-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcfa130194763-1"><span class="crayon-i">stormpath</span><span class="crayon-sy">.</span><span class="crayon-i">web</span><span class="crayon-sy">.</span><span class="crayon-i">cors</span><span class="crayon-sy">.</span><span class="crayon-i">allowed</span><span class="crayon-sy">.</span><span class="crayon-i">originUris</span><span class="crayon-h"> </span>=<span class="crayon-h"> </span><span class="crayon-i">http</span><span class="crayon-sy">:</span><span class="crayon-c">//localhost:4200,https://pwa-client.cfapps.io</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>Next, build the app, set some environment variables for Stormpath, then start it. If you run the following commands from the <code>server</code> directory, all of this should happen for you.</p>
+<p></p>
+<div id="crayon-621f23d3afcfb682853028" class="crayon-syntax crayon-theme-stormpath crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mvn clean package
+cf push -p target/*jar pwa-server --no-start
+cf set-env pwa-server STORMPATH_API_KEY_ID &lt;your-api-key-id&gt;
+cf set-env pwa-server STORMPATH_API_KEY_SECRET &lt;your-api-key-secret&gt;
+cf start pwa-server</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="hide">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-621f23d3afcfb682853028-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcfb682853028-2">2</div><div class="crayon-num" data-line="crayon-621f23d3afcfb682853028-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-621f23d3afcfb682853028-4">4</div><div class="crayon-num" data-line="crayon-621f23d3afcfb682853028-5">5</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-621f23d3afcfb682853028-1"><span class="crayon-e">mvn </span><span class="crayon-e">clean </span><span class="crayon-t">package</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcfb682853028-2"><span class="crayon-e">cf </span><span class="crayon-i">push</span><span class="crayon-h"> </span>-<span class="crayon-i">p</span><span class="crayon-h"> </span><span class="crayon-i">target</span>/*<span class="crayon-e">jar </span><span class="crayon-i">pwa</span>-<span class="crayon-i">server</span><span class="crayon-h"> </span>--<span class="crayon-i">no</span>-<span class="crayon-e">start</span></div><div class="crayon-line" id="crayon-621f23d3afcfb682853028-3"><span class="crayon-e">cf </span><span class="crayon-i">set</span>-<span class="crayon-r">env</span><span class="crayon-h"> </span><span class="crayon-i">pwa</span>-<span class="crayon-e">server </span><span class="crayon-i">STORMPATH_API_KEY_ID</span><span class="crayon-h"> </span><span class="crayon-h">&lt;</span><span class="crayon-i">your</span>-<span class="crayon-i">api</span>-<span class="crayon-i">key</span>-<span class="crayon-r">id</span><span class="crayon-h">&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-621f23d3afcfb682853028-4"><span class="crayon-e">cf </span><span class="crayon-i">set</span>-<span class="crayon-r">env</span><span class="crayon-h"> </span><span class="crayon-i">pwa</span>-<span class="crayon-e">server </span><span class="crayon-i">STORMPATH_API_KEY_SECRET</span><span class="crayon-h"> </span><span class="crayon-h">&lt;</span><span class="crayon-i">your</span>-<span class="crayon-i">api</span>-<span class="crayon-i">key</span>-<span class="crayon-i">secret</span><span class="crayon-h">&gt;</span></div><div class="crayon-line" id="crayon-621f23d3afcfb682853028-5"><span class="crayon-e">cf </span><span class="crayon-e">start </span><span class="crayon-i">pwa</span>-<span class="crayon-i">server</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p></p>
+<p>After deploying to Pivotal’s Cloud Foundry, I ran a Lighthouse audit again and found my score to be 96/100. Not too shabby!</p>
+<p><img src="https://stormpath.com/wp-content/uploads/2017/02/lighthouse-report-production.png" alt="Lighthouse Production Report" /></p>
+<h2 id="automation">Automation<a href="#automation" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h2>
+<p>There were quite a few steps involved to deploy this application and update files for production. For that reason, I wrote a <a href="https://github.com/stormpath/stormpath-spring-boot-angular-pwa-example/blob/master/deploy.sh"><code>deploy.sh</code></a> script that automates everything and uses random domain names for both servers. Kudos to <a href="https://twitter.com/starbuxman">Josh Long</a> for creating it.</p>
+<h2 id="source-code">Source Code<a href="#source-code" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h2>
+<p>You can find the source code associated with this article <a href="https://github.com/stormpath/stormpath-spring-boot-angular-pwa-example">on GitHub</a>. If you find any bugs, please file an issue, or leave a comment on this post. Of course, you can always <a href="https://twitter.com/mraible">ping me on Twitter</a> too.</p>
+<h2 id="whats-next">What’s Next?<a href="#whats-next" class="heading-link"><i class="stp-icons stp-icon-link2"></i></a></h2>
+<p>This article showed you how to develop a Spring Boot backend, and lock it down with Stormpath. You learned how to develop an Angular front end and use Stormpath’s Angular SDK to communicate with the secure backend. You also learned how to create a progressive web application and deploy it to the cloud.</p>
+<p>One of the recommendations in the Lighthouse report was to <a href="https://developers.google.com/web/tools/lighthouse/audits/http2">use HTTP/2</a>. In a future post, I’ll write about HTTP/2, what cloud providers support it, and how to deploy to the ones that do.</p>
+<p>I’d like to give a big thanks to all the engineers that’ve been developing progressive web apps and documenting how to do it. It’s new and exciting stuff, and may become the best way to write mobile applications in the future. Add in a little best-of-breed authentication tools, like Stormpath, and you’re well on your way to being a bleeding edge developer!</p>
+<div class="clearfix"></div>
+</div>
+</article>
+</div>
+<div class="blog_sidebar col-md-3 col-md-offset-1 nopadding" data-spy="affix" data-offset-top="240" data-offset-bottom="600">
+<div id="search-5" class="widget widget_search"><form role="search" method="get" class="search-form form" action="https://stormpath.com/">
+<label for="form-search-input" class="sr-only">Search for</label>
+<div class="input-group">
+<input type="search" id="form-search-input" class="form-control" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+<span class="input-group-btn">
+<button type="submit" class="button button-green button-small search-button"><i class="stp-icons stp-icon-search"></i></button>
+</span>
+</div>
+<input type="hidden" name="post_type" value="post" />
+</form>
+</div><div id="categories-5" class="widget widget_categories"><h3 class="widget-title">Explore the Topic</h1> <ul>
+<li class="cat-item cat-item-10"><a href="https://stormpath.com/blog/category/net">.NET</a>
+</li>
+<li class="cat-item cat-item-13"><a href="https://stormpath.com/blog/category/general">General</a>
+</li>
+<li class="cat-item cat-item-8"><a href="https://stormpath.com/blog/category/java">Java</a>
+</li>
+<li class="cat-item cat-item-74"><a href="https://stormpath.com/blog/category/javascript">Javascript</a>
+</li>
+<li class="cat-item cat-item-9"><a href="https://stormpath.com/blog/category/mobile">Mobile</a>
+</li>
+<li class="cat-item cat-item-7"><a href="https://stormpath.com/blog/category/node">Node</a>
+</li>
+<li class="cat-item cat-item-5"><a href="https://stormpath.com/blog/category/php">PHP</a>
+</li>
+<li class="cat-item cat-item-11"><a href="https://stormpath.com/blog/category/python">Python</a>
+</li>
+<li class="cat-item cat-item-12"><a href="https://stormpath.com/blog/category/rest-api">REST API</a>
+</li>
+</ul>
+</div>
+<div class="social-bar widget stormpath-social-counter-widget" data-action="fetch_social_share_count" data-instance="2">
+<h3 class="widget-title">Share a Post</h3>
+<a class="social-icon si-small si-borderless si-twitter share-button" target="_blank" href="https://twitter.com/share?text=Progressive+Web+Applications+with+Angular%2C+Spring+Boot%2C+and+Stormpath - &url=https%3A%2F%2Fstormpath.com%2Fblog%2Fprogressive-web-applications-angular-spring-boot-stormpath&via=gostormpath">
+<i class="stp-icons stp-icon-twitter"><div class="social-icon-counter">0</div></i>
+<i class="stp-icons stp-icon-twitter"><div class="social-icon-counter">0</div></i>
+</a>
+<a class="social-icon si-small si-borderless si-facebook share-button" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fstormpath.com%2Fblog%2Fprogressive-web-applications-angular-spring-boot-stormpath&title=Progressive%20Web%20Applications%20with%20Angular%2C%20Spring%20Boot%2C%20and%20Stormpath">
+<i class="stp-icons stp-icon-facebook"><div class="social-icon-counter">0</div></i>
+<i class="stp-icons stp-icon-facebook"><div class="social-icon-counter">0</div></i>
+</a>
+<a class="social-icon si-small si-borderless si-gplus share-button" target="_blank" href="https://plus.google.com/share?url=https%3A%2F%2Fstormpath.com%2Fblog%2Fprogressive-web-applications-angular-spring-boot-stormpath">
+<i class="stp-icons stp-icon-gplus"><div class="social-icon-counter">0</div></i>
+<i class="stp-icons stp-icon-gplus"><div class="social-icon-counter">0</div></i>
+</a>
+<a class="social-icon si-small si-borderless si-linkedin share-button" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fstormpath.com%2Fblog%2Fprogressive-web-applications-angular-spring-boot-stormpath&title=Progressive%20Web%20Applications%20with%20Angular%2C%20Spring%20Boot%2C%20and%20Stormpath&source=https%3A%2F%2Fstormpath.com">
+<i class="stp-icons stp-icon-linkedin"><div class="social-icon-counter">0</div></i>
+<i class="stp-icons stp-icon-linkedin"><div class="social-icon-counter">0</div></i>
+</a>
+</div>
+</div>
+</main>
+</div>
+</div>
+</section>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<footer id="footer" class="dark">
+<div class="container">
+<div class="footer-widgets-wrap nopadding topmargin-sm bottommargin-sm clearfix">
+<div class="col-md-4">
+<div id="text-4" class="widget widget_text"> <div class="textwidget"><img src="https://stormpath.com/wp-content/uploads/2017/08/logos.png" class="footer-logo" /></div>
+</div> </div>
+<div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-5">
+<div id="nav_menu-2" class="widget widget_links widget_nav_menu"></div> </div>
+<div class="col-md-2 col-sm-4 col-xs-6">
+<div id="nav_menu-3" class="widget widget_links widget_nav_menu"></div> </div>
+<div class="col-md-3 col-sm-4 col-xs-12" id="info-social">
+<div id="text-3" class="widget widget_text"> <div class="textwidget"><div>
+<strong>Support:</strong>
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="16727360737a796673646556797d62773875797b">[email&#160;protected]</a>
+</div>
+</div>
+</div> </div>
+</div>
+</div>
+<div id="copyrights">
+<div class="container clearfix">
+<div class="col-md-12">
+Copyright 2017 Stormpath </div>
+</div>
+</div>
+</footer>
+</div>
+
+
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NQZZFW"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-NQZZFW');</script>
+
+<link rel='stylesheet' id='crayon-css' href='https://stormpath.com/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/stormpath.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.3.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"stormpath"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.21'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.0.21"},"disqusIdentifier":"8132 http:\/\/stormpath.com\/?p=8132","disqusShortname":"stormpath","disqusTitle":"Progressive Web Applications with Angular, Spring Boot, and Stormpath","disqusUrl":"https:\/\/stormpath.com\/blog\/progressive-web-applications-angular-spring-boot-stormpath","postId":"8132"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/disqus-comment-system/public/js/comment_embed.js?ver=3.0.21'></script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/themes/stormpath/vendor/js/script-global.min.js?ver=5.4.9'></script>
+<script type='text/javascript' src='https://stormpath.com/wp-includes/js/wp-embed.min.js?ver=5.4.9'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/stormpath.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var stormpath_social_object = {"ajaxurl":"https:\/\/stormpath.com\/wp-admin\/admin-ajax.php","post_id":"8132"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stormpath.com/wp-content/plugins/stormpath-social-media-widgets/widgets/js/social-media-counter.js?ver=5.4.9'></script>
+</body>
+</html>
